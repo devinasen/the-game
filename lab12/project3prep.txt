@@ -1,0 +1,35 @@
+Q: Can you think of an analogy between the process of tesselating hexagons and randomly generating a world using rooms and hallways? 
+What is the hexagon and what is the tesselation on the Project 3 side?
+
+A:
+Tesselating hexagonas creates a repeating pattern of the same image in a space. When we randomly generate this world, we are concerned with keeping
+the pattern consistent of where our hallways lead to. This is sort of like a WQU, where when the edges connect to form one building. Each hallway can
+be split into it own room.
+-----
+Q: If you were to start working on world generation, what kind of method would you think of writing first? 
+Think back to the lab and the process used to eventually get to tesselating hexagons.
+
+A:
+I would start by writing the addHexagon method that adds a Hexagon object to the world and continue the correct tessellating pattern. The way I would
+approach this is by creating a WQU object.
+
+Q: What distinguishes a hallway from a room? How are they similar?
+
+A: A hallway connects two rooms together. They are similar because the intersection of a hallway is also just a big room.
+
+-----
+Q: For tesselating hexagons, one of the hardest parts is figuring out where to place each hexagon/how to easily place hexagons on screen in an algorithmic way. 
+After looking at your own implemention, consider the implementation provided near the end of the lab. 
+How did your implementation differ from the given one? What lessons can be learned from it?
+
+A: The lab implementation was that we would similarly go about implementing the addHexagon method first and then consider the "rules" and invariants
+behind creating the world and tessellating  the hexagons.
+
+-----
+Q: Consider an algorithm for placing rooms and hallways on your map. 
+Ideally, consider many algorithms and think about what makes some easier or harder to implement. Try and bring those ideas together into a single simple algorithm which accomplishes the task. 
+In general, algorithms with as few edge cases as possible are better algorithms.
+
+A: If the WQU object is different, the hallway connection of another must be the same WQU object for it to be considered a room. A hallway separates two
+different rooms. Adding a hallway for the same WQU object just makes the room bigger. After that I would worry about how all of this converges to a "world"
+and the different directions - north, south, east, and west.
